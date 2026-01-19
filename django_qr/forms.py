@@ -2,12 +2,12 @@ from django import forms
 
 
 class QRCodeForm(forms.Form):
-    restraunt_name=forms.CharField(
+    restaurant_name=forms.CharField(
         max_length=150,
-        label="Restraunt name",
+        label="Restaurant name",
         widget=forms.TextInput(attrs={
             'class':'form-control',
-            'placeholder': 'enter restraunt name',
+            'placeholder': 'enter restaurant name',
         })
     )
     url=forms.URLField(
