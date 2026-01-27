@@ -91,13 +91,14 @@
         <p class="subtitle">Your QR code is ready to be used</p>
 
         <div class="qr-wrapper">
-            <img src="{{ qr_url }}" alt="QR Code">
+            <img src="data:image/png;base64,{{ qr_base64 }}" alt="QR Code">
         </div>
 
         <div>
-            <a href="{{ qr_url }}" download="{{ file_name }}" class="btn btn-download w-100">
+            <a href="data:image/png;base64,{{ qr_base64 }}" download="{{ file_name }}" class="btn btn-download w-100">
                 Download QR Code
             </a>
+
         </div>
 
         <div class="footer-note">
