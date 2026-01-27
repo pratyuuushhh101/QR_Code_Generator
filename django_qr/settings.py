@@ -76,10 +76,9 @@ WSGI_APPLICATION = 'django_qr.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('postgresql://pratz_user:emWmrJYImshNiY4QfrDlSv70zC5kVfVw@dpg-d5s92mu3jp1c73enilt0-a/pratz')
-    )
+    'default': dj_database_url.config()
 }
+
 
 
 # Password validation
@@ -117,7 +116,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT=[os.path.join(BASE_DIR, 'staticfiles')]
+STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "media_defaults")]
 
